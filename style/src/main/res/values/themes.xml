@@ -1,0 +1,250 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+     <style name="Widget.Oride.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/button_color_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+<!--        <item name="android:fontFamily">@font/poppins</item>-->
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Widget.Oride.Button.Rect" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/button_color_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <!--        <item name="android:fontFamily">@font/poppins</item>-->
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Widget.Oride.Button.Secondary.Rect" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/button_color_secondary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <!--        <item name="android:fontFamily">@font/poppins</item>-->
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Widget.Oride.Button.Icon" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorYellow</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="minWidth">0dp</item>
+        <item name="minHeight">0dp</item>
+        <!--        <item name="android:fontFamily">@font/poppins</item>-->
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Widget.Oride.Button.Round" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/button_color_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+<!--        <item name="android:fontFamily">@font/poppins</item>-->
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Widget.Oride.Button.OutlineButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">#212121</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="strokeColor">@color/button_color_primary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+<!--        <item name="android:fontFamily">@font/poppins</item>-->
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Widget.Oride.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <!--        <item name="android:fontFamily">@font/poppins</item>-->
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Widget.Oride.Button.NavItem" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/grey</item>
+        <item name="iconTint">@color/grey</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <!--        <item name="android:fontFamily">@font/poppins</item>-->
+        <item name="fontWeight">500</item>
+    </style>
+
+
+    <style name="Widget.Oride.ToggleButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/button_background</item>
+        <item name="android:textColor">@color/button_text_color</item>
+        <item name="iconTint">@color/button_text_color</item>
+        <item name="android:textSize">18sp</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <!--        <item name="android:fontFamily">@font/poppins</item>-->
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Widget.Oride.TextInputLayout.Rect" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">14sp</item>
+        <item name="boxCornerRadiusBottomStart">5dp</item>
+        <item name="boxCornerRadiusBottomEnd">5dp</item>
+        <item name="boxCornerRadiusTopStart">5dp</item>
+        <item name="boxCornerRadiusTopEnd">5dp</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="hintEnabled">false</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="errorIconTint">@null</item>
+        <item name="boxBackgroundColor">@color/colorEditTextBg</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxStrokeWidth">0dp</item>
+<!--        <item name="boxBackgroundMode">none</item>-->
+    </style>
+
+
+    <style name="Widget.Oride.TextInputLayout.OutlineBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">14sp</item>
+        <item name="boxCornerRadiusBottomStart">5dp</item>
+        <item name="boxCornerRadiusBottomEnd">5dp</item>
+        <item name="boxCornerRadiusTopStart">5dp</item>
+        <item name="boxCornerRadiusTopEnd">5dp</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="hintEnabled">false</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="errorIconTint">@null</item>
+        <!--        <item name="boxBackgroundMode">none</item>-->
+    </style>
+
+
+    <style name="FullScreenDialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="colorPrimaryDark">@color/blue_700</item>
+        <item name="colorAccent">@color/blue_200</item>
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="actionMenuTextColor">@color/blue_200</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay.Circular" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">10%</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay.Right.Left.Circular" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSizeTopRight">10%</item>
+        <item name="cornerSizeTopLeft">0%</item>
+        <item name="cornerSizeBottomLeft">0%</item>
+        <item name="cornerSizeBottomRight">10%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Top.Circular" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSizeTopRight">20%</item>
+        <item name="cornerSizeTopLeft">20%</item>
+        <item name="cornerSizeBottomLeft">0%</item>
+        <item name="cornerSizeBottomRight">0%</item>
+    </style>
+
+    <style name="Widget.Oride.NavigationView" parent="Widget.Design.NavigationView">
+        <item name="itemIconTint">@color/nav_item_color</item>
+        <item name="itemTextColor">@color/nav_item_color</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="RatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="colorControlNormal">@color/colorRatingDefault</item>
+        <item name="colorControlActivated">@color/colorYellow</item>
+    </style>
+
+    <style name="CustomRatingBarSmall" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/custom_rating</item>
+        <item name="colorControlNormal">@color/colorRatingDefault</item>
+        <item name="colorControlActivated">@color/colorYellow</item>
+        <item name="android:isIndicator">true</item>
+        <item name="minHeight">10dp</item>
+        <item name="maxHeight">16dp</item>
+    </style>
+
+    <style name="RatingBar.White" parent="Widget.AppCompat.RatingBar">
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <style name="AppbarTitleTextAppearance" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="CardViewTopCornerRounded" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Top.Corner.Rounded</item>
+        <item name="cardPreventCornerOverlap">false</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Top.Corner.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="Widget.Oride.Progress" parent="Widget.MaterialComponents.LinearProgressIndicator">
+        <item name="android:indeterminate">true</item>
+    </style>
+
+
+</resources>

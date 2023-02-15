@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvVatLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.6"
+        android:text="VAT"
+        android:textColor="@color/textColorLight"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/placeDivider1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+    <View
+        android:id="@+id/placeDivider1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvVatLabel"
+        app:layout_constraintEnd_toStartOf="@id/placeDivider2"
+        app:layout_constraintStart_toEndOf="@id/tvVatLabel"
+        app:layout_constraintTop_toTopOf="@id/tvVatLabel"/>
+
+    <View
+        android:id="@+id/placeDivider2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvVatLabel"
+        app:layout_constraintEnd_toStartOf="@id/tvVat"
+        app:layout_constraintStart_toEndOf="@id/placeDivider1"
+        app:layout_constraintTop_toTopOf="@id/tvVatLabel"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvVat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="$25"
+        android:textColor="@color/textColorLight"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintBottom_toBottomOf="@id/tvVatLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/placeDivider2"
+        app:layout_constraintTop_toTopOf="@id/tvVatLabel"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

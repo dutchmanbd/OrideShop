@@ -1,0 +1,12 @@
+<resources>
+    <string name="permanently_denied">Permanently Denied</string>
+    <string name="please_enable_permission">Please enable permission from settings</string>
+    <string name="ride_detail">Ride Detail</string>
+    <string name="driver">Driver</string>
+    <string name="car">Car</string>
+    <string name="number_plate">Number Plate</string>
+    <string name="your_rating">Your rating</string>
+    <string name="rating_status">4.0 (Great)</string>
+    <string name="report_an_issue">Report an issue</string>
+
+</resources>

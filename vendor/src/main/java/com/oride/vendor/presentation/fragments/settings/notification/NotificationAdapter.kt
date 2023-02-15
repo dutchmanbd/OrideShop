@@ -1,0 +1,37 @@
+package com.oride.vendor.presentation.fragments.settings.notification
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import com.oride.vendor.data.Notification
+import com.oride.vendor.databinding.LayoutNotificationItemBinding
+import com.oride.vendor.presentation.base.BaseAdapter
+import javax.inject.Inject
+
+class NotificationAdapter @Inject constructor(
+) : BaseAdapter<Notification, LayoutNotificationItemBinding>() {
+
+    override fun initializeViewBinding(
+        layoutInflater: LayoutInflater,
+        parent: ViewGroup,
+        viewType: Int) = LayoutNotificationItemBinding.inflate(layoutInflater, parent, false)
+
+    override fun initializeDiffItemCallback() = object : DiffUtil.ItemCallback<Notification>() {
+        override fun areItemsTheSame(oldItem: Notification, newItem: Notification): Boolean {
+            return oldItem.hashCode() == newItem.hashCode()
+        }
+
+        override fun areContentsTheSame(oldItem: Notification, newItem: Notification): Boolean {
+            return oldItem.hashCode() == newItem.hashCode()
+        }
+    }
+
+    override fun onBindViewHolder(holder: BaseViewHolder<LayoutNotificationItemBinding>, position: Int) {
+        val notification = differ.currentList[position]
+        holder.binding.apply {
+            tvTitle.text =notification.title
+            tvDesc.text =notification.description
+            tvReadStatus.text =notification.action
+        }
+    }
+}

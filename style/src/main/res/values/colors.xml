@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_200">#2e4ffe</color>
+    <color name="blue_500">#2e4ffe</color>
+    <color name="blue_700">#2e4ffe</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white85">#D9FFFFFF</color>
+    <color name="button_color_primary">#2e4ffe</color>
+    <color name="button_color_secondary">#8DA4C9</color>
+    <color name="textColor">#000000</color>
+    <color name="textColorLight">#7A8CA8</color>
+    <color name="colorEditTextBg">#EDF0F7</color>
+    <color name="colorTextBg">#CBD2DE</color>
+
+    <color name="colorAppBar">#FAFAFA</color>
+    <color name="grey">#7E7E7E</color>
+    <color name="lightGrey">#AEAEAE</color>
+    <color name="colorBlue">#2e4ffe</color>
+    <color name="colorLightBlue">#CCD4FF</color>
+    <color name="colorWhiteBlue">#EFF4FB</color>
+    <color name="colorDivider">#EAEAEA</color>
+    <color name="colorYellow">#FFA51D</color>
+    <color name="colorRatingDefault">#CCD4FF</color>
+    <color name="colorIcon">#1A2F52</color>
+    <color name="colorDisabled">#8DA4C9</color>
+    <color name="colorOffer">#D0115F</color>
+    <color name="colorGreen">#65DC41</color>
+    <color name="colorTeal">#1AB1B0</color>
+    <color name="colorOrange">#FF7544</color>
+    <color name="colorPink">#FB5A7E</color>
+    <color name="colorBlueAccent">#8677FE</color>
+    <color name="colorUncheckedTab">#7A8CA8</color>
+    <color name="colorBottomSheetBG">#EEF5FE</color>
+    <color name="colorCheckableBtnBG">#FFFFFFFF</color>
+    <color name="transparentBlack">#70000000</color>
+    <color name="colorAvTime">#E6F0FF</color>
+
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.oride.delivery.presentation.fragments.home.HomeFragment"
+        android:label="@string/title_map"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_order"
+        android:name="com.oride.delivery.presentation.fragments.orders.OrdersFragment"
+        android:label="@string/title_order"
+        tools:layout="@layout/fragment_orders" />
+
+    <fragment
+        android:id="@+id/nav_earnings"
+        android:name="com.oride.delivery.presentation.fragments.earnings.EarningsFragment"
+        android:label="@string/title_earnings"
+        tools:layout="@layout/fragment_earnings" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.oride.delivery.presentation.fragments.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.oride.delivery.presentation.fragments.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.oride.delivery.presentation.fragments.auth.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_biometricAuthFragment"
+            app:destination="@id/biometricAuthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.oride.delivery.presentation.fragments.orders.OrderDetailsFragment"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details" />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.oride.delivery.presentation.fragments.settings.ContactFragment"
+        android:label="ContactFragment"
+        tools:layout="@layout/fragment_contact"/>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.oride.delivery.presentation.fragments.settings.notification.NotificationFragment"
+        android:label="NotificationFragment"
+        tools:layout="@layout/fragment_notification"/>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.oride.delivery.presentation.fragments.settings.WebViewFragment"
+        android:label="WebViewFragment"
+        tools:layout="@layout/fragment_web_view"/>
+    <fragment
+        android:id="@+id/biometricAuthFragment"
+        android:name="com.oride.delivery.presentation.fragments.auth.BiometricAuthFragment"
+        android:label="BiometricAuthFragment"
+        tools:layout="@layout/fragment_biometric_auth">
+        <action
+            android:id="@+id/action_biometricAuthFragment_to_facialCameraFragment"
+            app:destination="@id/facialCameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/facialRecognitionFragment"
+        android:name="com.oride.delivery.presentation.fragments.auth.FacialRecognitionFragment"
+        android:label="FacialRecognitionFragment"
+        tools:layout="@layout/fragment_facial_recognition">
+        <action
+            android:id="@+id/action_facialRecognitionFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/facialCameraFragment"
+        android:name="com.oride.delivery.presentation.fragments.auth.FacialCameraFragment"
+        android:label="FacialCameraFragment"
+        tools:layout="@layout/fragment_facial_camera">
+        <action
+            android:id="@+id/action_facialCameraFragment_to_facialRecognitionFragment"
+            app:destination="@id/facialRecognitionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.oride.delivery.presentation.fragments.settings.SupportFragment"
+        android:label="SupportFragment"
+        tools:layout="@layout/fragment_support"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.oride.delivery.presentation.fragments.settings.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.oride.delivery.presentation.fragments.orders.report.ReportFragment"
+        android:label="ReportFragment"
+        tools:layout="@layout/fragment_report"/>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.oride.delivery.presentation.fragments.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/shiftFragment"
+        android:name="com.oride.delivery.presentation.fragments.shift.ShiftFragment"
+        android:label="fragment_shift"
+        tools:layout="@layout/fragment_shift" />
+
+</navigation>

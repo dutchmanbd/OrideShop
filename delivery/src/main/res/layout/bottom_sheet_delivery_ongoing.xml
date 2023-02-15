@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_gravity="bottom"
+    style="@style/CardViewTopCornerRounded"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardElevation="4dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="32dp"
+        android:background="@drawable/bg_gradient">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDestination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:listitem="@layout/layout_delivery_destination_item"
+            android:overScrollMode="never"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/ivProfilePicture"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivProfilePicture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/rider_image"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@id/rvDestination"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Rounded" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Peter Quill"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:textColor="@color/textColor"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfilePicture"
+            app:layout_constraintEnd_toStartOf="@id/callNowBtn"
+            app:layout_constraintStart_toEndOf="@id/ivProfilePicture"
+            app:layout_constraintTop_toTopOf="@id/ivProfilePicture" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/callNowBtn"
+            style="@style/Widget.Oride.Button.Icon"
+            android:layout_width="?actionBarSize"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            app:backgroundTint="@color/colorBlue"
+            app:icon="@drawable/ic_baseline_call"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfilePicture"
+            app:layout_constraintEnd_toStartOf="@id/messageBtn"
+            app:layout_constraintTop_toTopOf="@id/ivProfilePicture" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/messageBtn"
+            style="@style/Widget.Oride.Button.Icon"
+            android:layout_width="?actionBarSize"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            app:backgroundTint="@color/button_color_secondary"
+            app:icon="@drawable/ic_message"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfilePicture"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintTop_toTopOf="@id/ivProfilePicture" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTotalPayment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Total Payment: $49.00"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@id/ivProfilePicture"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintBottom_toTopOf="@id/tvPaymentType"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPaymentType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Payment Type: Cash on delivery"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvTotalPayment"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintBottom_toTopOf="@id/tvEstTime"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvEstTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Est. Time to Delivery: 30 min"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvPaymentType"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.fragments.shift.ShiftFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRunningShiftLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/running_shift"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvRunningShift"
+        app:layout_constraintBottom_toTopOf="@id/tvHourLabel"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRunningShift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="02:37 hour"
+        android:textColor="@color/colorBlue"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintStart_toEndOf="@id/tvRunningShiftLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvHourLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/hour"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvRunningShiftLabel"
+        app:layout_constraintEnd_toStartOf="@id/tvHour"
+        app:layout_constraintBottom_toTopOf="@id/tvUpcomingShiftLabel"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="12:00 PM to 4:00 PM"
+        android:textColor="@color/colorGreen"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintStart_toEndOf="@id/tvHourLabel"
+        app:layout_constraintTop_toTopOf="@id/tvHourLabel"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintBottom_toBottomOf="@id/tvHourLabel"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvUpcomingShiftLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/upcoming_shift"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvHourLabel"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintBottom_toTopOf="@id/tvUpcomingHourLabel"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvUpcomingHourLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/hour"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvUpcomingShiftLabel"
+        app:layout_constraintEnd_toStartOf="@id/tvTodayLabel"
+        app:layout_constraintBottom_toTopOf="@id/rvTodayTime"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTodayLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Day: Today"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintStart_toEndOf="@id/tvUpcomingHourLabel"
+        app:layout_constraintTop_toTopOf="@id/tvUpcomingHourLabel"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintBottom_toBottomOf="@id/tvUpcomingHourLabel"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTodayTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tvTodayLabel"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@id/tvUpcomingHourLabel"
+        app:layout_constraintBottom_toTopOf="@id/tvTomorrowLabel"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:overScrollMode="never"
+        tools:listitem="@layout/layout_shift_time"
+        tools:itemCount="4"
+        app:spanCount="2"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTomorrowLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Day: Tomorrow"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintStart_toStartOf="@id/tvTodayLabel"
+        app:layout_constraintTop_toBottomOf="@id/rvTodayTime"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintBottom_toTopOf="@id/rvTomorrowTime"
+        app:layout_constraintHorizontal_bias="0.0"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTomorrowTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tvTodayLabel"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@id/tvTomorrowLabel"
+        app:layout_constraintBottom_toTopOf="@id/saveBtn"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:overScrollMode="never"
+        tools:listitem="@layout/layout_shift_time"
+        tools:itemCount="6"
+        app:spanCount="2"
+        android:clipToPadding="false"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        style="@style/Widget.Oride.Button.Rect"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/save"
+        app:layout_constraintTop_toBottomOf="@id/rvTomorrowTime"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintBottom_toTopOf="@id/tvOfflineOnlineLabel"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOfflineOnlineLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/offline_online"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/saveBtn"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintBottom_toTopOf="@id/toggle"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvStatusLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/status"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/toggle"
+        app:layout_constraintEnd_toStartOf="@id/toggle"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@id/toggle" />
+
+    <RadioGroup
+        android:id="@+id/toggle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/toggle_bg"
+        android:orientation="horizontal"
+        android:checkedButton="@+id/rbOnline"
+        app:layout_constraintBottom_toTopOf="@id/tvConnectSupportLabel"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintStart_toEndOf="@id/tvStatusLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvOfflineOnlineLabel" >
+
+        <RadioButton
+            android:id="@+id/rbOffline"
+            android:background="@drawable/toggle_offline"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="0.8dp"
+            android:layout_marginStart="0.8dp"
+            android:layout_marginBottom="0.8dp"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/offline"
+            android:textStyle="bold"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/tab_text_color" />
+
+        <RadioButton
+            android:id="@+id/rbOnline"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="0.8dp"
+            android:layout_marginEnd="0.8dp"
+            android:layout_marginBottom="0.8dp"
+            android:background="@drawable/toggle_online"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/online"
+            android:textStyle="bold"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/tab_text_color" />
+
+    </RadioGroup>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvConnectSupportLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/connect_support"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/toggle"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintBottom_toTopOf="@id/connectBtn"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/connectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        style="@style/Widget.Oride.Button.Rect"
+        app:backgroundTint="@color/colorIcon"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/connect_oride"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvConnectSupportLabel"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

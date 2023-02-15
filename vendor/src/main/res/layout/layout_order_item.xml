@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivProfilePicture"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rvOrderItem"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Rounded"
+            android:src="@drawable/user_image" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Peter Quill"
+            android:textColor="@color/textColor"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toEndOf="@id/ivProfilePicture"
+            app:layout_constraintTop_toTopOf="@id/ivProfilePicture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvOrderId"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvOrderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="#1234"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintStart_toEndOf="@id/ivProfilePicture"
+            app:layout_constraintTop_toBottomOf="@id/tvProfileName"
+            app:layout_constraintEnd_toStartOf="@id/divider"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfilePicture"
+            />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@color/colorDivider"
+            app:layout_constraintTop_toTopOf="@id/tvOrderId"
+            app:layout_constraintStart_toEndOf="@id/tvOrderId"
+            app:layout_constraintEnd_toStartOf="@id/tvOrderTime"
+            app:layout_constraintBottom_toBottomOf="@id/tvOrderId"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvOrderTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="02:25 PM"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintStart_toEndOf="@id/divider"
+            app:layout_constraintTop_toTopOf="@id/tvOrderId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tvOrderId"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOrderItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:listitem="@layout/layout_order_food_item"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toTopOf="@id/btnPickedUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivProfilePicture"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvOrderPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="$45.00"
+            android:textColor="@color/colorBlue"
+            app:layout_constraintBottom_toBottomOf="@id/btnPickedUp"
+            app:layout_constraintEnd_toStartOf="@id/tvDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnPickedUp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_bias="0.0"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/details"
+            android:textColor="@color/textColorLight"
+            app:drawableEndCompat="@drawable/ic_baseline_arrow_down"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="@id/btnPickedUp"
+            app:layout_constraintEnd_toStartOf="@id/btnPickedUp"
+            app:layout_constraintStart_toEndOf="@id/tvOrderPrice"
+            app:layout_constraintTop_toTopOf="@id/btnPickedUp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPickedUp"
+            style="@style/Widget.Oride.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_goneMarginBottom="16dp"
+            android:text="@string/picked_up"
+            app:backgroundTint="@color/colorOffer"
+            app:layout_constraintBottom_toTopOf="@id/rvOrderDetail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvOrderItem" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOrderDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:listitem="@layout/layout_order_food_detail_item"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toTopOf="@id/clVat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnPickedUp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clVat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvOrderDetail"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvVatLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent="0.6"
+                android:text="VAT"
+                android:textColor="@color/textColorLight"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/placeDivider1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+            <View
+                android:id="@+id/placeDivider1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvVatLabel"
+                app:layout_constraintEnd_toStartOf="@id/placeDivider2"
+                app:layout_constraintStart_toEndOf="@id/tvVatLabel"
+                app:layout_constraintTop_toTopOf="@id/tvVatLabel"/>
+
+            <View
+                android:id="@+id/placeDivider2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvVatLabel"
+                app:layout_constraintEnd_toStartOf="@id/tvVat"
+                app:layout_constraintStart_toEndOf="@id/placeDivider1"
+                app:layout_constraintTop_toTopOf="@id/tvVatLabel"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvVat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="$25"
+                android:textColor="@color/textColorLight"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                app:layout_constraintBottom_toBottomOf="@id/tvVatLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/placeDivider2"
+                app:layout_constraintTop_toTopOf="@id/tvVatLabel"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/detailGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="rvOrderDetail, clVat"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
